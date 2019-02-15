@@ -1,7 +1,6 @@
 FROM senggen/gitlab-runner-elixir-centos
 
-RUN rpm -i http://download.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm && \
-    yum install nodejs && \
+RUN yum install -y nodejs npm && \
     yum clean all
 
 VOLUME ["/etc/gitlab-runner/elixir", "/etc/gitlab-runner"]
