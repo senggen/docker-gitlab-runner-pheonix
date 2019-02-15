@@ -1,6 +1,6 @@
 FROM senggen/gitlab-runner-elixir-centos
 
-RUN yum install -y nodejs npm && \
+RUN yum install -y nodejs && \
     yum clean all
 
 VOLUME ["/etc/gitlab-runner/elixir", "/etc/gitlab-runner"]
